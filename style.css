@@ -7,6 +7,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  padding-top: 100px;
 }
 
 h1 {
@@ -313,4 +314,33 @@ footer .header-bottom {
     height: 60px;
     background-color: #F2C94C;
     color: #fff;
+}
+
+.hero-section {
+    background: url(./img/banner/pageheader.png) no-repeat center center;
+    
+    height: 353px;
+    width: 1920px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+.hero-section h2 {
+    color: #fff;
+}
+.hero-section .btn-primary {
+    background-color: #007bff;
+    border: none;
+    font-weight: bold;
+}
+#team .card-title {
+    font-weight: 600;
+    font-size: 20px;
+}
+#team .card-text {
+    color: #f2c94c;
+    font-weight: medium;
+    font-size: 15px;
 }
