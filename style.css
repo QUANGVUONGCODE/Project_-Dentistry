@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+    
+  color: #2F80ED;
+
+}
+
+h3 {
+  font-size: 1.2rem;
+  /* font-weight: 800; */
+
+  color: #2F80ED;
+}
+
+h4 {
+  font-size: 1rem;
+  color: #2F80ED;
+
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1d1d1d;
+}
+
+h6 {
+  color: #d8d8d8;
+}
+
+hr {
+    width: 50%;
+    height: 4px;
+    background-color: yellow;
+    border: none;
+}
+p{
+    opacity: 0.7;
+}
+
+
+#header .header-top{
+    background-color: #056CB6;
+    color: #fff;
+}
+
+.navbar {
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-item .nav-link{
+    padding: 35px;
+}
+
+.navbar .nav-item .nav-link:hover{
+    color: #2F80ED;
+}
+
+
+
+#banner .carousel-item img {
+    height: auto; /* Hoặc điều chỉnh chiều cao theo ý muốn */
+    width: 100%;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+
+.nav-item .dropdown-toggle::after {
+    display: none !important;
+}
+
+
+
+/* Hiện menu con khi hover vào mục dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    top: 75%;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Thiết lập trạng thái ban đầu của menu con */
+.nav-item .dropdown-menu {
+    display: block; /* Giữ block nhưng không hiện */
+    opacity: 0;
+    left: -40px;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease; /* Hiệu ứng mượt */
+    padding: 0;
+    margin: 0;
+    background-color: #056CB6 ;
+    border-radius: 0;
+    width: 230px;
+}
+.nav-item .dropdown-menu li a {
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-item .dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+
+/* Tùy chỉnh khoảng cách và giao diện menu con */
+.nav-item .dropdown-menu a {
+    padding: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-item .dropdown-menu a:hover {
+    background-color: #F2C94C;
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 1025px){
+    .navbar .nav-item .nav-link{
+        padding: 0 10px;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu{
+        top : 100%;
+        width: 200px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 991px){
+    body > nav > div > button:hover,
+    body > nav > div > button:focus{
+        background-color: #1d1d1d;
+    }
+    body > nav > div > button:hover #bar,
+    body > nav > div > button:focus #bar{
+        color: #fff;
+    }
+
+    #navbarNav > ul{
+        margin: 1rem;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+
+    }
+
+    #navbarNav > ul > li:nth-child(n) > a{
+        padding: 10px 0 !important;
+    }
+
+    .nav-item .dropdown-menu{
+        left: 0;
+        width: 100%;
+        height: 10px;
+    }
+}
+
+
+
+
+#about-head{
+    display: flex;
+    align-items: center;
+}
+
+#about-head img{
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+}
+
+#about-head div{
+    padding-left: 40px;
+}
+
+
+
+#about-head li i {
+    padding-right: 20px;
+    color:#F25252 ;
+}
+
+#service{
+    background-color: #C4C4C4;
+}
+
+@media (max-width: 768px) {
+    #page-header {
+        height: auto; /* Để chiều cao tự động thích ứng */
+        padding: 20px; /* Tăng khoảng cách padding */
+    }
+
+    #about-head {
+        display: flex;
+        flex-direction: column; /* Chuyển từ ngang sang dọc */
+        align-items: center; /* Căn các phần tử sang trái */
+        gap: 20px; /* Tạo khoảng cách giữa các phần tử */
+    }
+
+    #about-head img {
+        max-width: 100%; /* Ảnh chiếm toàn bộ chiều rộng */
+        height: auto; 
+        object-fit: cover; /* Đảm bảo tỉ lệ ảnh */
+    }
+}
+
+/* Thu nhỏ chiều rộng của từng product */
+.product {
+    width: 90%; /* Thu nhỏ chiều rộng */
+    max-width: 380px;
+    height: 377px; /* Đặt chiều rộng tối đa */
+    margin: auto; /* Căn giữa trong cột */
+}
+
+/* Đặt màu nền cho từng product */
+.product-inner {
+    width: 100%;
+    height: 360px;
+    background-color: #f8f9fa; /* Màu nền nhạt */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng nổi */
+    padding: 15px;
+}
+
+#why-us{
+    background-image: url(./img/banner/about-pic-2.jpg);
+    width: 100%;
+    height:auto;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+}
+
+
+#why-us .content-why{
+    width: 50%;
+}
+
+
+#customers img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#customers .img-fluid{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+
+.slide{
+    background-color: #F8FAF5;
+}
+
+/* Màu vàng cho nút đang hoạt động */
+.carousel-indicators .active {
+    height: auto;
+    background-color: #F8C11C; /* Màu vàng đặc */
+}
+
+
+#news img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+footer{
+    
+}
+
+footer li a{
+    text-decoration: none;
+    line-height: 30px;
+}
+
+
+footer .header-top {
+    background-color: #056CB6;
+    color: #fff;
+}
+
+footer .header-bottom {
+    height: 60px;
+    background-color: #F2C94C;
+    color: #fff;
+}
