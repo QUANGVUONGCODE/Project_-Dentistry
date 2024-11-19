@@ -1,87 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-    
-  color: #2F80ED;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    color: #2F80ED;
 
 }
 
 h3 {
-  font-size: 1.2rem;
-  /* font-weight: 800; */
+    font-size: 1.2rem;
+    /* font-weight: 800; */
 
-  color: #2F80ED;
+    color: #2F80ED;
 }
 
 h4 {
-  font-size: 1rem;
-  color: #2F80ED;
+    font-size: 1rem;
+    color: #2F80ED;
 
 }
 
 h5 {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #1d1d1d;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1d1d1d;
 }
 
 h6 {
-  color: #d8d8d8;
+    color: #d8d8d8;
 }
 
 hr {
     width: 50%;
     height: 4px;
-    background-color: yellow;
+    background-color: rgb(222, 215, 78);
     border: none;
 }
-p{
-    opacity: 0.7;
-}
 
 
-#header .header-top{
+
+
+#header .header-top {
     background-color: #056CB6;
     color: #fff;
 }
 
-.navbar {
-    font-size: 16px;
+
+nav.navbar {
+    position: relative;
     top: 0;
-    left: 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1020;
+    background-color: white;
+    transition: transform 0.3s all; /* Thêm hiệu ứng trượt và mờ dần */
+    transform: translateY(0); /* Vị trí ban đầu */
+    opacity: 1;
 }
 
-.navbar .nav-item .nav-link{
+/* Khi nav được cố định */
+nav.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1020;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(0); /* Giữ ở vị trí trên cùng */
+    opacity: 1; /* Đảm bảo hiển thị đầy đủ */
+}
+
+/* Khi nav chưa hiển thị */
+nav.navbar.hidden {
+    transform: translateY(-100%); /* Trượt ra khỏi màn hình */
+    opacity: 0; /* Làm mờ đi */
+}
+
+.navbar .nav-item .nav-link {
     padding: 35px;
 }
 
-.navbar .nav-item .nav-link:hover{
+.navbar .nav-item .nav-link:hover {
     color: #2F80ED;
 }
 
 
 
 #banner .carousel-item img {
-    height: auto; /* Hoặc điều chỉnh chiều cao theo ý muốn */
+    height: auto;
+    /* Hoặc điều chỉnh chiều cao theo ý muốn */
     width: 100%;
-    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    object-fit: cover;
+    /* Đảm bảo ảnh không bị méo */
 }
 
 .nav-item .dropdown-toggle::after {
@@ -101,18 +125,21 @@ p{
 
 /* Thiết lập trạng thái ban đầu của menu con */
 .nav-item .dropdown-menu {
-    display: block; /* Giữ block nhưng không hiện */
+    display: block;
+    /* Giữ block nhưng không hiện */
     opacity: 0;
     left: -40px;
     visibility: hidden;
     transform: translateY(10px);
-    transition: all 0.3s ease; /* Hiệu ứng mượt */
+    transition: all 0.3s ease;
+    /* Hiệu ứng mượt */
     padding: 0;
     margin: 0;
-    background-color: #056CB6 ;
+    background-color: #056CB6;
     border-radius: 0;
     width: 230px;
 }
+
 .nav-item .dropdown-menu li a {
     padding: 10px 20px;
     color: #fff;
@@ -138,13 +165,13 @@ p{
 }
 
 
-@media only screen and (max-width: 1025px){
-    .navbar .nav-item .nav-link{
+@media only screen and (max-width: 1025px) {
+    .navbar .nav-item .nav-link {
         padding: 0 10px;
     }
 
-    .nav-item.dropdown:hover .dropdown-menu{
-        top : 100%;
+    .nav-item.dropdown:hover .dropdown-menu {
+        top: 100%;
         width: 200px;
     }
 }
@@ -152,17 +179,19 @@ p{
 
 
 
-@media only screen and (max-width: 991px){
-    body > nav > div > button:hover,
-    body > nav > div > button:focus{
+@media only screen and (max-width: 991px) {
+
+    body>nav>div>button:hover,
+    body>nav>div>button:focus {
         background-color: #1d1d1d;
     }
-    body > nav > div > button:hover #bar,
-    body > nav > div > button:focus #bar{
+
+    body>nav>div>button:hover #bar,
+    body>nav>div>button:focus #bar {
         color: #fff;
     }
 
-    #navbarNav > ul{
+    #navbarNav>ul {
         margin: 1rem;
         justify-content: flex-end;
         align-items: flex-end;
@@ -170,11 +199,11 @@ p{
 
     }
 
-    #navbarNav > ul > li:nth-child(n) > a{
+    #navbarNav>ul>li:nth-child(n)>a {
         padding: 10px 0 !important;
     }
 
-    .nav-item .dropdown-menu{
+    .nav-item .dropdown-menu {
         left: 0;
         width: 100%;
         height: 10px;
@@ -184,73 +213,111 @@ p{
 
 
 
-#about-head{
+#about-head {
     display: flex;
     align-items: center;
 }
 
-#about-head img{
-    width: 60%;
+#about-head img {
+    width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-#about-head div{
+#about-head div {
     padding-left: 40px;
 }
+
+.btn:hover {
+    background-color: #F2C94C; /* Thay đổi màu nền */
+    color: #fff; /* Thay đổi màu chữ */
+    border: none;
+}
+
 
 
 
 #about-head li i {
     padding-right: 20px;
-    color:#F25252 ;
+    color: #F25252;
 }
 
-#service{
+#service {
     background-color: #C4C4C4;
+}
+
+
+@media (max-width: 415px) {
+    .header-top span:not(:first-child), 
+    .header-top a {
+        display: none; /* Ẩn cả email và Facebook */
+    }
+
 }
 
 @media (max-width: 768px) {
     #page-header {
-        height: auto; /* Để chiều cao tự động thích ứng */
-        padding: 20px; /* Tăng khoảng cách padding */
+        height: auto;
+        /* Để chiều cao tự động thích ứng */
+        padding: 20px;
+        /* Tăng khoảng cách padding */
     }
 
     #about-head {
         display: flex;
-        flex-direction: column; /* Chuyển từ ngang sang dọc */
-        align-items: center; /* Căn các phần tử sang trái */
-        gap: 20px; /* Tạo khoảng cách giữa các phần tử */
+        flex-direction: column;
+        /* Chuyển từ ngang sang dọc */
+        align-items: center;
+        /* Căn các phần tử sang trái */
+        gap: 20px;
+        /* Tạo khoảng cách giữa các phần tử */
     }
 
-    #about-head img {
-        max-width: 100%; /* Ảnh chiếm toàn bộ chiều rộng */
-        height: auto; 
-        object-fit: cover; /* Đảm bảo tỉ lệ ảnh */
-    }
 }
 
 /* Thu nhỏ chiều rộng của từng product */
 .product {
-    width: 90%; /* Thu nhỏ chiều rộng */
+    width: 90%;
+    /* Thu nhỏ chiều rộng */
     max-width: 380px;
-    height: 377px; /* Đặt chiều rộng tối đa */
-    margin: auto; /* Căn giữa trong cột */
+    height: 377px;
+    /* Đặt chiều rộng tối đa */
+    margin: auto;
+    /* Căn giữa trong cột */
+    cursor: pointer;
+    margin-bottom: 2rem;
 }
 
 /* Đặt màu nền cho từng product */
 .product-inner {
     width: 100%;
     height: 360px;
-    background-color: #f8f9fa; /* Màu nền nhạt */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng nổi */
+    background-color: #f8f9fa;
+    /* Màu nền nhạt */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Tạo hiệu ứng nổi */
     padding: 15px;
 }
 
-#why-us{
+
+
+.product {
+    transition: all 0.3s ease;
+}
+
+.product:hover{
+    transform: translateY(-5px); /* Nâng button lên 5px khi hover */
+    box-shadow: 0px 4px 10px  rgba(208, 207, 207, 0.2); /* Làm bóng đổ mạnh hơn khi hover */
+}
+
+.product div h4:hover {
+    color: #F2C94C;
+}
+
+#why-us {
     background-image: url(./img/banner/about-pic-2.jpg);
     width: 100%;
-    height:auto;
+    height: auto;
     background-size: cover;
     background-position: top center;
     display: flex;
@@ -260,52 +327,83 @@ p{
 }
 
 
-#why-us .content-why{
+#why-us .content-why {
     width: 50%;
 }
 
 
-#customers img{
+#customers img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-#customers .img-fluid{
+#customers .img-fluid {
     width: 70px;
     height: 70px;
     border-radius: 100%;
 }
 
-.slide{
+.slide {
     background-color: #F8FAF5;
 }
 
 /* Màu vàng cho nút đang hoạt động */
 .carousel-indicators .active {
     height: auto;
-    background-color: #F8C11C; /* Màu vàng đặc */
+    background-color: #F8C11C;
+    /* Màu vàng đặc */
 }
 
 
-#news img{
+#news img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-footer{
-    
+#news div a h3:hover {
+    color: #F2C94C;
 }
 
-footer li a{
+#news .news-item {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#news .news-item:hover {
+    transform: translateY(-5px); /* Nâng button lên 5px khi hover */
+    box-shadow: 0px 4px 14px  rgba(64, 63, 63, 0.2); /* Làm bóng đổ mạnh hơn khi hover */
+}
+
+footer h3,
+footer h4 {
+    color: #fff;
+}
+
+footer li a {
     text-decoration: none;
     line-height: 30px;
+    color: #fff;
+}
+
+footer .contact i,
+footer img {
+    cursor: pointer;
+}
+
+footer li:hover a,
+footer .icon-footer i:hover {
+    color: #F2C94C;
+}
+
+footer i {
+    color: #fff;
 }
 
 
 footer .header-top {
-    background-color: #056CB6;
+    background-color: #2F80ED;
     color: #fff;
 }
 
