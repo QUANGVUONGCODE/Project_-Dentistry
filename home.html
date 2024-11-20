@@ -35,7 +35,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
             <div class="container">
-                <a href="home.html"><img src="./img/logo/LOGO 2 MPHUOCHC 1.png" alt="Logo" style="max-height: 50px;" ></a>
+                <a onclick="window.location.href = 'home.html';"  href="home.html"><img src="./img/logo/LOGO 2 MPHUOCHC 1.png" alt="Logo" style="max-height: 50px;" ></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -63,7 +63,7 @@
                                 KHÁCH HÀNG
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item" href="#">HÌNH ẢNH</a></li>
+                                <li><a class="dropdown-item" href="CustomerImage.html">HÌNH ẢNH</a></li>
                                 <li><a class="dropdown-item" href="#">CẢM NHẬN</a></li>
                             </ul>
                         <li class="nav-item">
@@ -325,11 +325,11 @@
     <section id="news">
         <div class="container my-5">
             <h2 class="text-center my-5">TIN TỨC NHA KHOA</h2>
-            <div class="row my-5 ">
-                <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="row my-5 g-4 ">
+                <div class="news-item col-lg-4 col-md-12 col-sm-12">
                     <img src="./img/news/post-img-small-1 1.jpg" alt="">
-                    <h3 class="mt-3">Dở khóc dở cười câu chuyện răng khôn</h3>
-                    <p>Phàm là những bộ phận trên cơ thể con người thì đều có chức năng nhất định...</p>
+                    <a href="#" class="text-decoration-none"><h3 class="mt-3">Dở khóc dở cười câu chuyện răng khôn</h3></a>
+                    <p class="opacity-reset">Phàm là những bộ phận trên cơ thể con người thì đều có chức năng nhất định...</p>
                     <div class="row align-items-center">
                         <div class="col-auto text-danger">
                             <span>6 12,2019</span>
@@ -339,10 +339,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="news-item col-lg-4 col-md-12 col-sm-12">
                     <img src="./img/news/post-img-small-2 1.jpg" alt="">
-                    <h3 class="mt-3">Nhổ răng khi mang thai có an toàn không</h3>
-                    <p>Việc mang bầu khiến cơ thể tụt canxi vô cùng trầm trọng. Nếu không...</p>
+                    <a href="#" class="text-decoration-none"><h3 class="mt-3 ">Nhổ răng khi mang thai có an toàn không</h3></a>
+                    <p class="opacity-reset">Việc mang bầu khiến cơ thể tụt canxi vô cùng trầm trọng. Nếu không...</p>
                     <div class="row align-items-center">
                         <div class="col-auto text-danger">
                             <span>6 12,2019</span>
@@ -352,10 +352,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="news-item col-lg-4 col-md-12 col-sm-12">
                     <img src="./img/news/post-img-small-3 1.jpg" alt="">
-                    <h3 class="mt-3">Niềng răng trả góp lãi suất 0đ tại sao không?!</h3>
-                    <p>Bạn có biết tin gì chưa? Hỡi những cô gái, chàng trai đang muốn cải thiện...</p>
+                    <a href="#" class="text-decoration-none"><h3 class="mt-3">Niềng răng trả góp lãi suất 0đ tại sao không?!</h3></a>
+                    <p class="opacity-reset">Bạn có biết tin gì chưa? Hỡi những cô gái, chàng trai đang muốn cải thiện...</p>
                     <div class="row align-items-center">
                         <div class="col-auto text-danger">
                             <span>6 12,2019</span>
@@ -368,7 +368,7 @@
             </div>
 
 
-            <div class="row mt-5 my-5">
+            <div class="row mt-5 my-5 pt-5 pb-5">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <h2>ĐỂ ĐẠT ĐƯỢC NỤ CƯỜI NHƯ MONG MUỐN</h2>
                     <h4 class="text-dark">HÃY ĐỒNG HÀNH CÙNG CHÚNG TÔI ĐỂ NỤ CƯỜI CỦA BẠN THÊM RẠNG NGỜI</h4>
@@ -380,7 +380,7 @@
         </div>
     </section>
 
-    <footer id="footer" class="mt-5 py-5">
+    <footer id="footer" class="mt-5">
         <div class="header-top">
             <div class="container">
                 <div class="row pt-5">
@@ -414,7 +414,7 @@
                             <p>10.00am - 5.00pm</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="col-lg-3 col-md-6 col-sm-12 contact">
                         <h3>THÔNG TIN LIÊN HỆ</h3>
                         <hr>
                         <div class="contact d-flex">
@@ -429,7 +429,7 @@
                             <span><i class="fa-solid fa-envelope"></i></span>
                             <span class="ps-2">info@nhakhoamyphuoc.vn</span>
                         </div>
-                        <div class="row justify-content-start text-white">
+                        <div class="row justify-content-start icon-footer">
                             <div class="col-auto">
                                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                             </div>
@@ -451,9 +451,9 @@
                 </div>
             </div>
         </div>
-        <div class="header-bottom">
-            <div class="container py-3">
-                <p class="text-center">© 2023 All rights reserved</p>
+        <div class="header-bottom py-3">
+            <div class="container">
+                <p class="text-center">NHA KHOA MỸ PHƯỚC © 2020 All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -465,6 +465,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
