@@ -49,7 +49,7 @@ h6 {
 hr {
     width: 50%;
     height: 4px;
-    background-color: yellow;
+    background-color: #F2C94C;
     border: none;
 }
 p{
@@ -423,8 +423,133 @@ footer .header-bottom {
     font-weight: medium;
     font-size: 15px;
 }
-
-
+.testimonial {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  .testimonial p {
+    font-style: italic;
+    font-size: 18px;
+    color: #555555;
+    font-weight: 400;
+    line-height: 26.94px;
+    word-wrap: break-word
+  }
+  .testimonial .name {
+    font-weight: 400;
+    margin-top: 10px;
+    color: #056CB6;
+  }
+  /* Contact */
+  .contact-info h4,
+    .contact-form h4 {
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+    .contact-info ul {
+      list-style: none;
+      padding: 0;
+    }
+    .contact-info ul li {
+      margin-bottom: 10px;
+    }
+    .contact-info li{
+        color: #555555;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .contact-info ul li i {
+      margin-right: 5px;
+      color: #F2C94C;
+      font-size: 14px;
+    }
+    iframe {
+        width: 100%;
+        height: 500px;
+        
+        }
+    /* dich vu 1 */
+    .search-container {
+        background-color: #F8FAF5; 
+        padding: 30px;
+        
+    }
+    
+    .search-container input[type="text"] {
+        font-size: 17px;
+        border: 1px solid #C4C4C4;
+        background: #FFFCFC;
+        border-radius: 0%;
+    }
+    
+    .search-container button {
+        border-radius: 0%;
+        float: left;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .service-list {
+        background-color: #F8FAF5; 
+        padding: 30px;
+    }
+    .service-list h4{
+        margin-bottom: 20px;
+        color: black;
+    }
+    .service-list ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    .service-list li {
+        margin-bottom: 16px;
+        
+    }
+    .service-list li a{
+        text-decoration: none;
+        color: #555555;
+        font-size: 14px;
+    }
+    .service-list li i{
+        margin-right: 5px;
+        color: red;
+        font-size: 14px;
+    }
+    .service_content{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .service_content img{
+        height: 380px;
+        width: 750px;
+    }
+    .service_content h2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #555;
+        font-size: 22px;
+        font-weight: 400;
+    }
+    .service_content p{
+        color: #555;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .service_content blockquote{
+        border-left: 4px solid #E7E7E7;
+        padding-left: 10px;
+        margin-left: 10px;
+    }
+    .service_content blockquote p{
+        color: #777;
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 400;
+    }
 
 @media only screen and (max-width: 1281px){
     body{
