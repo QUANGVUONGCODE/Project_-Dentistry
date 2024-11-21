@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service</title>
+    <title>Home</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -34,7 +34,8 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
             <div class="container">
-                <a href="home.html"><img src="./img/logo/LOGO 2 MPHUOCHC 1.png" alt="Logo" style="max-height: 50px;" ></a>
+                <a onclick="window.location.href = 'home.html';">
+                    <img src="./img/logo/LOGO 2 MPHUOCHC 1.png" alt="Logo" style="max-height: 50px;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -45,11 +46,11 @@
                             <a class="nav-link" aria-current="page" href="AboutUs.html">VỀ CHÚNG TÔI</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="Service.html" id="servicesDropdown" role="button">
+                            <a class="nav-link dropdown-toggle active" href="Service.html" id="servicesDropdown" role="button">
                                 DỊCH VỤ
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item" href="#">BỌC RĂNG SỨ</a></li>
+                                <li><a class="dropdown-item" href="Dichvu1.html">BỌC RĂNG SỨ</a></li>
                                 <li><a class="dropdown-item" href="#">RĂNG SỨ THẨM MỸ</a></li>
                                 <li><a class="dropdown-item" href="#">TRỒNG IPLANT</a></li>
                                 <li><a class="dropdown-item" href="#">NIỀNG RĂNG</a></li>
@@ -58,18 +59,18 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button">
+                            <a class="nav-link dropdown-toggle" href="Client.html" id="servicesDropdown" role="button">
                                 KHÁCH HÀNG
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item" href="#">HÌNH ẢNH</a></li>
-                                <li><a class="dropdown-item" href="#">CẢM NHẬN</a></li>
+                                <li><a class="dropdown-item" href="CustomerImage.html">HÌNH ẢNH</a></li>
+                                <li><a class="dropdown-item" href="Client.html">CẢM NHẬN</a></li>
                             </ul>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">BẢNG GIÁ</a>
+                            <a class="nav-link" href="Price.html">BẢNG GIÁ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">TIN TỨC & SỰ KIỆN</a>
+                            <a class="nav-link" href="News.html">TIN TỨC & SỰ KIỆN</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Contact.html">LIÊN HỆ</a>
@@ -85,7 +86,7 @@
         <div class="container">
                     <h2>DỊCH VỤ</h2>
                     <p>Phòng Khám Nha Khoa Mỹ Phước</p>
-                    <button class="btn btn-primary my-4">Đặt lịch hẹn</button>
+                    <button class="btn btn-primary my-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Đặt lịch hẹn</button>
         </div>
     </section>
 
@@ -96,16 +97,16 @@
 
             <div class="row justify-content-center g-4 py-5">
                 <div class="product  text-center col-lg-4 col-md-6 col-sm-12 p-0">
-                    <div class="product-inner">
+                    <div onclick="window.location.href = 'Dichvu1.html';" class="product-inner">
                         <img src="./img/product/dv_img1 1.jpg" alt="Bọc răng sứ" class="img-fluid mb-3">
                         <h4>BỌC RĂNG SỨ</h4>
                         <p>Bọc răng sứ ivy - không còn sỉn màu, <br> thưa, hô, khập khểnh mòn men....</p>
                     </div>
                 </div>
                 <div class="product text-center col-lg-4 col-md-6 col-sm-12 p-0">
-                    <div class="product-inner p-3">
+                    <div onclick="window.location.href = 'Dichvu2.html';" class="product-inner p-3">
                         <img src="./img/product/dv_img2 1.jpg" alt="Bọc răng sứ" class="img-fluid mb-3">
-                        <h4>BỌC RĂNG SỨ</h4>
+                        <h4>DÁN SỨ VENEER</h4>
                         <p>Dán sứ veneer hạn chế tối đa mài răng, răng xinh đều đẹp, không gây e buốt, kết quả bền...
                         </p>
                     </div>
@@ -113,7 +114,7 @@
                 <div class="product text-center col-lg-4 col-md-6 col-sm-12 p-0">
                     <div class="product-inner p-3">
                         <img src="./img/product/dv_img3 1.jpg" alt="Bọc răng sứ" class="img-fluid mb-3">
-                        <h4>BỌC RĂNG SỨ</h4>
+                        <h4>TẨY TRẮNG RĂNG</h4>
                         <p>Tẩy trắng răng laser whitening nhanh chóng, an toàn - chỉ sau 60’ răng trắng bật tone từ...
                         </p>
                     </div>
@@ -121,21 +122,21 @@
                 <div class="product text-center col-lg-4 col-md-6 col-sm-12 p-0">
                     <div class="product-inner p-3">
                         <img src="./img/product/dv_img4 1.jpg" alt="Bọc răng sứ" class="img-fluid mb-3">
-                        <h4>BỌC RĂNG SỨ</h4>
+                        <h4>NIỀNG RĂNG THẨM MỸ</h4>
                         <p>Bọc răng sứ ivy - không còn sỉn màu, <br> thưa, hô, khập khểnh mòn men....</p>
                     </div>
                 </div>
                 <div class="product text-center col-lg-4 col-md-6 col-sm-12 p-0">
                     <div class="product-inner p-3">
                         <img src="./img/product/dv_img5 1.jpg" alt="Bọc răng sứ" class="img-fluid mb-3">
-                        <h4>BỌC RĂNG SỨ</h4>
+                        <h4>CẤY GHÉP RĂNG IMPLANT</h4>
                         <p>Bọc răng sứ ivy - không còn sỉn màu, <br> thưa, hô, khập khểnh mòn men....</p>
                     </div>
                 </div>
                 <div class="product text-center col-lg-4 col-md-6 col-sm-12 p-0">
                     <div class="product-inner p-3">
                         <img src="./img/product/dv_img6 1.jpg" alt="Bọc răng sứ" class="img-fluid mb-3">
-                        <h4>BỌC RĂNG SỨ</h4>
+                        <h4>TRÁM RĂNG THẨM MỸ</h4>
                         <p>Bọc răng sứ ivy - không còn sỉn màu, <br> thưa, hô, khập khểnh mòn men....</p>
                     </div>
                 </div>
@@ -146,14 +147,58 @@
 
 
     
+    <div id="exampleModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal">
+            <div class="modal-content">
+                <!-- Tiêu đề modal -->
+                <div class="modal-header">
+                    <h2 class="modal-title text-center">TƯ VẤN NHA KHOA CHO TÔI <br>
+                        TIẾT KIỆM THỜI GIAN VÀ CHI PHÍ
+                    </h2>
+                    <button type="button" class="btn-close text-danger close-up" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <!-- Nội dung chính modal -->
+                <div class="modal-body">
+                    <p class="text-center modal-body--text">Nha khoa Mỹ Phước sẽ liên hệ đến Quý khách trong thời gian
+                        sớm nhất.</p>
+                    <div class="form-group">
+                        <label for="name">Họ và Tên</label>
+                        <input type="text" class="form-control" id="name" placeholder="Họ và Tên">
+                        <span class="error" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại</label>
+                        <input type="text" class="form-control " id="phone" placeholder="Số điện thoại">
+                        <span class="error" id="phoneError"></span>
+                    </div>
+                </div>
+                <!-- Nút hành động -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-submit" onclick="validateForm()">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <footer id="footer" class="mt-5">
+        <div id="myToast" class="toast align-items-center  border-0" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                   
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
         <div class="header-top">
             <div class="container">
                 <div class="row pt-5">
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <img src="./img/logo/logo_footer.png" alt="">
                         <p class="mt-3">Đăng ký để nhận những thông tin và được tư vấn tốt nhất.</p>
-                        <button class="btn btn-primary mt-3">
+                        <button class="btn btn-primary mt-3 my-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             ĐĂNG KÝ TẠI ĐÂY
                         </button>
                     </div>
@@ -161,11 +206,11 @@
                         <h3>THÔNG TIN</h3>
                         <hr>
                         <ul class="text-uppercase list-unstyled list">
-                            <li><a href="#">Dịch vụ</a></li>
-                            <li><a href="#">Khách hàng</a></li>
-                            <li><a href="#">Bảng giá</a></li>
-                            <li><a href="#">Tin tức & sự kiện</a></li>
-                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="Service.html">Dịch vụ</a></li>
+                            <li><a href="Customer.html">Khách hàng</a></li>
+                            <li><a href="Price.html">Bảng giá</a></li>
+                            <li><a href="News.html">Tin tức & sự kiện</a></li>
+                            <li><a href="Contact.html">Liên hệ</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
@@ -212,7 +257,7 @@
                                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -222,7 +267,9 @@
                 <p class="text-center">NHA KHOA MỸ PHƯỚC © 2020 All Rights Reserved.</p>
             </div>
         </div>
+
     </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -230,6 +277,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
 

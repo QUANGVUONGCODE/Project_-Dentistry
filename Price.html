@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng giá</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Định dạng bảng */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        .price-table th,
+        .price-table td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #0066cc;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            /* Loại bỏ đường viền cho thẻ <th> */
+        }
+
+        td {
+            border: 1px solid #0066cc;
+        }
+
+        .header-title {
+            background-color: #0066cc;
+            color: #FFD700;
+            /* Màu vàng */
+            font-size: 18px;
+
+        }
+
+        .header-price,
+        .header-discount {
+            font-weight: bold;
+            font-size: 16px;
+            color: #FFD700;
+        }
+
+        .original-price {
+            font-weight: bold;
+            color: #0066cc;
+
+        }
+
+        .price-table {
+            width: 100%;
+            /* Chiếm toàn bộ chiều rộng của container */
+            table-layout: fixed;
+            /* Cố định chiều rộng của cột, nội dung sẽ tự động cắt bớt nếu cần */
+            border-collapse: collapse;
+            /* Loại bỏ khoảng cách giữa các viền bảng */
+        }
+
+
+        .discount-price {
+            font-weight: bold;
+            color: red;
+        }
+
+        .discount-badge {
+            display: inline-block;
+            margin-bottom: 10px;
+            background-color: #ff0000;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 3px;
+            padding: 2px 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top">
+        <div class="header-top py-3">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <span class="me-3"><i class="fa-solid fa-phone fs-5"></i> 1800.2045</span>
+                    <span><i class="fa-regular fa-envelope fs-5"></i> info@nhakhoamyphuoc</span>
+                </div>
+                <div>
+                    <a href="#" class="text-decoration-none text-dark">
+                        <i class="fa-brands fa-facebook fs-5 me-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+            <div class="container">
+                <a onclick="window.location.href = 'home.html';">
+                    <img src="./img/logo/LOGO 2 MPHUOCHC 1.png" alt="Logo" style="max-height: 50px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="AboutUs.html">VỀ CHÚNG TÔI</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="Service.html" id="servicesDropdown" role="button">
+                                DỊCH VỤ
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="Dichvu1.html">BỌC RĂNG SỨ</a></li>
+                                <li><a class="dropdown-item" href="Dichvu2.html">RĂNG SỨ THẨM MỸ</a></li>
+                                <li><a class="dropdown-item" href="#">TRỒNG IPLANT</a></li>
+                                <li><a class="dropdown-item" href="#">NIỀNG RĂNG</a></li>
+                                <li><a class="dropdown-item" href="#">LẤY CAO RĂNG</a></li>
+                                <li><a class="dropdown-item" href="#">TRÁM RĂNG THẨM MỸ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="Client.html" id="servicesDropdown" role="button">
+                                KHÁCH HÀNG
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="CustomerImage.html">HÌNH ẢNH</a></li>
+                                <li><a class="dropdown-item" href="Client.html">CẢM NHẬN</a></li>
+                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Price.html">BẢNG GIÁ</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="News.html">TIN TỨC & SỰ KIỆN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Contact.html">LIÊN HỆ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-section  justify-content-start  py-5 my-5">
+        <div class="container">
+                    <h2>BẢNG GIÁ</h2>
+                    <p>Phòng Khám Nha Khoa Mỹ Phước</p>
+                    <button class="btn btn-primary my-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Đặt lịch hẹn</button>
+        </div>
+    </section>
+
+
+    <section id="price" class="py-5 my-5">
+
+        <div class="container">
+
+            <div class="section-title text-center ">
+                <h2 class="text-uppercase ">Bảng Giá Nha Khoa Mỹ Phước</h2>
+                <p>Nha Khoa Mỹ Phước chân thành cảm ơn sự tin tưởng và lựa chọn của Quý khách hàng. Tự hào là
+                    địa chỉ nha khoa uy tín, Nha Khoa Mỹ Phước sử dụng cơ sở tốt nhat, Gòn luôn minh bạch về giá, cam
+                    kết mang đến sự hài
+                    lòng và chất lượng phục vụ tốt nhất.</p>
+            </div>
+
+            <div class="price-table-container ">
+
+
+
+                <table class="price-table mt-5">
+                    <thead>
+                        <tr>
+                            <th colspan="2 " class="header-title ">THĂM KHÁM VÀ TƯ VẤN</th>
+                            <th colspan="2" class="header-price">HỖ TRỢ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" class="fw-bold">KHÁM VÀ TƯ VẤN </td>
+                            <td colspan="2" class="discount-price">KHÔNG TÍNH PHÍ</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">CHỤP X – QUANG QUANH CHÓP </td>
+                            <td colspan="2" class="discount-price">KHÔNG TÍNH PHÍ</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">CHỤP CEPHALO </td>
+                            <td colspan="2" class="discount-price">150.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">CHỤP PANORAMA</td>
+                            <td colspan="2" class="discount-price">150.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">CHỤP 3D KIỂM TRA TỔNG QUÁT RĂNG</td>
+                            <td colspan="2" class="discount-price">300.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="price-table mt-5">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="header-title ">TRÁM RĂNG</th>
+                            <th class="header-price">GIÁ GỐC</th>
+                            <th class="header-discount">GIÁ ƯU ĐÃI 50%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" class="fw-bold">TRÁM RĂNG SÂU XOANG I</td>
+                            <td class="original-price text-decoration-line-through">600.000</td>
+                            <td class="discount-price">300.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">TRÁM RĂNG SÂU XOANG II, III, IV, V</td>
+                            <td class="original-price text-decoration-line-through">1.000.000</td>
+                            <td class="discount-price">500.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">TRÁM RĂNG THẨM MỸ/ĐẮP MẶT RĂNG</td>
+                            <td class="original-price text-decoration-line-through">2.000.000</td>
+                            <td class="discount-price">1.000.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">TRÁM KẼ RĂNG THƯA</td>
+                            <td class="original-price text-decoration-line-through">2.000.000</td>
+                            <td class="discount-price">1.000.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">TRÁM RĂNG KẾT THÚC CHỮA TỦY</td>
+                            <td class="original-price text-decoration-line-through">600.000</td>
+                            <td class="discount-price">300.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">ĐIỀU TRỊ ĐỐM TRẮNG</td>
+                            <td class="original-price text-decoration-line-through">2.000.000</td>
+                            <td class="discount-price">1.000.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">ĐIỀU TRỊ ĐỐM VÀNG</td>
+                            <td class="original-price text-decoration-line-through">4.000.000</td>
+                            <td class="discount-price">2.000.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="price-table mt-5">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="header-title ">CẠO VÔI RĂNG</th>
+                            <th class="header-price">GIÁ GỐC</th>
+                            <th class="header-discount">GIÁ ƯU ĐÃI 50%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" class="fw-bold">CẠO VÔI RĂNG CẤP ĐỘ I</td>
+                            <td class="original-price text-decoration-line-through">600.000</td>
+                            <td class="discount-price">300.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">CẠO VÔI RĂNG CẤP ĐỘ II</td>
+                            <td class="original-price text-decoration-line-through">1.000.000</td>
+                            <td class="discount-price">500.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">CẠO VÔI RĂNG CẤP ĐỘ III</td>
+                            <td class="original-price text-decoration-line-through">2.000.000</td>
+                            <td class="discount-price">1.000.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="price-table mt-5">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="header-title ">NHỔ RĂNG</th>
+                            <th class="header-price">GIÁ GỐC</th>
+                            <th class="header-discount">GIÁ ƯU ĐÃI 50%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" class="fw-bold">NHỔ RĂNG LUNG LAY</td>
+                            <td class="original-price text-decoration-line-through">600.000</td>
+                            <td class="discount-price">300.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">NHỔ RĂNG TIỀN CỐI (R4,5)</td>
+                            <td class="original-price text-decoration-line-through">1.000.000</td>
+                            <td class="discount-price">500.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">TRÁM RĂNG THẨM MỸ/ĐẮP MẶT RĂNG</td>
+                            <td class="original-price text-decoration-line-through">1.400.000</td>
+                            <td class="discount-price">700.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">NHỔ RĂNG CỐI LỚN (R6,7)</td>
+                            <td class="original-price text-decoration-line-through">2.000.000</td>
+                            <td class="discount-price">1.000.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">NHỔ RĂNG KHÔN SỐ 8 CẤP I (MỌC THẲNG)</td>
+                            <td class="original-price text-decoration-line-through">2.000.000</td>
+                            <td class="discount-price">1.000.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">NHỔ RĂNG KHÔN SỐ 8 CẤP II (MỌC LỆCH 45 ĐỘ, 75 ĐỘ)</td>
+                            <td class="original-price text-decoration-line-through">4.000.000</td>
+                            <td class="discount-price">2.000.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">NHỔ RĂNG MỌC LỆCH NGOÀI CUNG RĂNG</td>
+                            <td class="original-price text-decoration-line-through">2.000.00 - 4.000.000</td>
+                            <td class="discount-price">1.000.000 - 2.000.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">NHỔ RĂNG NGẦM TRONG XƯƠNG CẤP IV</td>
+                            <td class="original-price text-decoration-line-through">6.000.00 - 10.000.000</td>
+                            <td class="discount-price">3.000.000 - 5.000.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <table class="price-table mt-5">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="header-title ">TẨY TRẮNG RĂNG</th>
+                            <th class="header-price">GIÁ GỐC</th>
+                            <th class="header-discount">GIÁ ƯU ĐÃI 50%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" class="fw-bold">TẨY TRẮNG RĂNG TẠI PHÒNG KHÁM</td>
+                            <td class="original-price text-decoration-line-through">3.000.000</td>
+                            <td class="discount-price">1.500.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">MÁNG TẨY TẠI NHÀ</td>
+                            <td class="original-price text-decoration-line-through">1.000.000</td>
+                            <td class="discount-price">500.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="fw-bold">TUÝP TẨY TRẮNG RĂNG TẠI NHÀ</td>
+                            <td class="original-price text-decoration-line-through">400.000</td>
+                            <td class="discount-price">200.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <table class="price-table mt-5">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="header-title">NIỀNG RĂNG – CHỈNH NHA</th>
+                            <th class="header-price">GIÁ GỐC</th>
+                            <th class="header-discount">GIÁ ƯU ĐÃI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3" class="service-name fw-bold">NIỀNG RĂNG MẮC CÀI KIM LOẠI</td>
+                            <td class="service-name fw-bold">CẤP ĐỘ 1</td>
+                            <td class="original-price text-decoration-line-through">32.000.000 <span class="discount-badge">50%</span></td>
+                            <td class="discount-price">16.000.000</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">CẤP ĐỘ 2</td>
+                            <td class="original-price text-decoration-line-through">50.000.000 <span class="discount-badge">50%</span></td>
+                            <td class="discount-price">25.000.000</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">CẤP ĐỘ 3</td>
+                            <td class="original-price text-decoration-line-through">64.000.000 <span class="discount-badge">50%</span></td>
+                            <td class="discount-price">32.000.000</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="service-name fw-bold">NIỀNG RĂNG MẮC CÀI COMPOSITE</td>
+                            <td class="service-name fw-bold">CẤP ĐỘ 1</td>
+                            <td class="original-price text-decoration-line-through">42.000.000 <span class="discount-badge">50%</span></td>
+                            <td class="discount-price">21.000.000</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">CẤP ĐỘ 2</td>
+                            <td class="original-price text-decoration-line-through">60.000.000 <span class="discount-badge">50%</span></td>
+                            <td class="discount-price">30.000.000</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">CẤP ĐỘ 3</td>
+                            <td class="original-price text-decoration-line-through">74.000.000 <span class="discount-badge">50%</span></td>
+                            <td class="discount-price">37.000.000</td>
+                        </tr>
+                        <tr>
+                            <td class="service-name fw-bold">NIỀNG RĂNG MẶT TRONG/ MẶT LƯỠI</td>
+                            <td class="service-name fw-bold">TÙY MỨC ĐỘ </td>
+                            <td class="original-price text-decoration-line-through">93.000.000 – 143.000.000 <span
+                                    class="discount-badge">35%</span></td>
+                            <td class="discount-price">65.000.000 – 100.000.000</td>
+                        </tr>
+                        <tr>
+                            <td class="service-name fw-bold">NIỀNG RĂNG TRONG SUỐT INVISALIGN</td>
+                            <td class="service-name fw-bold">TÙY SỐ LƯỢNG KHAY</td>
+                            <td class="original-price text-decoration-line-through">100.000.000 -170.000.000 <span class="discount-badge">35%</span></td>
+                            <td class="discount-price">70.000.000 – 120.000.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="service-name fw-bold">GẮN LẠI MẮC CÀI MỚI (COMPOSITE)</td>
+                            <td colspan="2" class="discount-price">200.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="service-name fw-bold">GẮN LẠI MẮC CÀI MỚI (SỨ)</td>
+                            <td colspan="2" class="discount-price">500.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="service-name fw-bold">ĐẶT MINIVIS KÉO RĂNG</td>
+                            <td colspan="2" class="discount-price">1.500.000 – 2.500.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="service-name fw-bold">HÀM DUY TRÌ SAU CHỈNH NHA</td>
+                            <td colspan="2" class="discount-price">1.000.000 – 2.000.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="service-name fw-bold">KHÍ CỤ GIỮ KHOẢNG CHO RĂNG VĨNH VIỄN MỌC</td>
+                            <td colspan="2" class="discount-price">2.000.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img src="./img/product/tu-van-khach-hang-1024x576.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h4 class="text-center">TƯ VẤN KHÁCH HÀNG</h4>
+                    <input type="text" name="name" id="user_name" placeholder="Họ và Tên" class="form-control mb-3">
+                    <input type="email" name="email" id="user_email" placeholder="Email" class="form-control mb-3">
+                    <input type="text" name="phone" id="phoneNumber" placeholder="Số điện thoại" class="form-control mb-3">
+                    <select name="" id="" class="form-control">
+                        <option value="">50% Niềng răng</option>
+                        <option value="">50% Dán sứ veneer</option>
+                        <option value="">50% Trồng răng sứ</option>
+                        <option value="">50% Cạo vôi răng</option>
+                        <option value="">50% Chữa tủy răng</option>
+                        <option value="">50% Mắc cài</option>
+                        <option value="">50% Nhổ răng</option>
+                    </select>
+                    <button onclick="validateForm2()" class="btn btn-primary mt-3">Đăng ký ngay</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="exampleModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal">
+            <div class="modal-content">
+                <!-- Tiêu đề modal -->
+                <div class="modal-header">
+                    <h2 class="modal-title text-center">TƯ VẤN NHA KHOA CHO TÔI <br>
+                        TIẾT KIỆM THỜI GIAN VÀ CHI PHÍ
+                    </h2>
+                    <button type="button" class="btn-close text-danger close-up" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <!-- Nội dung chính modal -->
+                <div class="modal-body">
+                    <p class="text-center modal-body--text">Nha khoa Mỹ Phước sẽ liên hệ đến Quý khách trong thời gian
+                        sớm nhất.</p>
+                    <div class="form-group">
+                        <label for="name">Họ và Tên</label>
+                        <input type="text" class="form-control" id="name" placeholder="Họ và Tên">
+                        <span class="error" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại</label>
+                        <input type="text" class="form-control " id="phone" placeholder="Số điện thoại">
+                        <span class="error" id="phoneError"></span>
+                    </div>
+                </div>
+                <!-- Nút hành động -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-submit" onclick="validateForm()">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="mt-5">
+        <div id="myToast" class="toast align-items-center  border-0" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                   
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="header-top">
+            <div class="container">
+                <div class="row pt-5">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img src="./img/logo/logo_footer.png" alt="">
+                        <p class="mt-3">Đăng ký để nhận những thông tin và được tư vấn tốt nhất.</p>
+                        <button class="btn btn-primary mt-3 my-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            ĐĂNG KÝ TẠI ĐÂY
+                        </button>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <h3>THÔNG TIN</h3>
+                        <hr>
+                        <ul class="text-uppercase list-unstyled list">
+                            <li><a href="Service.html">Dịch vụ</a></li>
+                            <li><a href="Customer.html">Khách hàng</a></li>
+                            <li><a href="Price.html">Bảng giá</a></li>
+                            <li><a href="News.html">Tin tức & sự kiện</a></li>
+                            <li><a href="Contact.html">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <h3>THỜI GIAN</h3>
+                        <hr>
+                        <div>
+                            <h4>THỨ 2-THỨ 7</h4>
+                            <p>8.00am - 5.00pm</p>
+                        </div>
+                        <div class="mt-4">
+                            <h4>CHỦ NHẬT</h4>
+                            <p>10.00am - 5.00pm</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 contact">
+                        <h3>THÔNG TIN LIÊN HỆ</h3>
+                        <hr>
+                        <div class="contact d-flex">
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <span class="ps-2">TC3, KCN MP2, Bến Cát, Bình Dương</span>
+                        </div>
+                        <div class="contact d-flex">
+                            <span><i class="fa-solid fa-phone"></i></span>
+                            <span class="ps-2"> 0274.3535.777</span>
+                        </div>
+                        <div class="contact d-flex">
+                            <span><i class="fa-solid fa-envelope"></i></span>
+                            <span class="ps-2">info@nhakhoamyphuoc.vn</span>
+                        </div>
+                        <div class="row justify-content-start icon-footer">
+                            <div class="col-auto">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom py-3">
+            <div class="container">
+                <p class="text-center">NHA KHOA MỸ PHƯỚC © 2020 All Rights Reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
