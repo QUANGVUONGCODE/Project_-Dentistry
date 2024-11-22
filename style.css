@@ -131,7 +131,10 @@ nav.navbar {
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
-.navbar i:hover,
+.navbar i:hover{
+    color: #007bff;
+    text-decoration: underline;
+}
 .navbar-light .navbar-nav .nav-link.active,
 .navbar i.active{
     color: #007bff;
@@ -182,7 +185,7 @@ nav.navbar.hidden {
 }
 
 .nav-item .dropdown-toggle::after {
-    display: none !important;
+    display: none;
 }
 
 
@@ -238,7 +241,7 @@ nav.navbar.hidden {
 }
 
 
-@media only screen and (max-width: 1025px) {
+@media  (max-width: 1025px) {
     .navbar .nav-item .nav-link {
         padding: 0 10px;
     }
@@ -252,7 +255,7 @@ nav.navbar.hidden {
 
 
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 992px) {
 
     body>nav>div>button:hover,
     body>nav>div>button:focus {
@@ -269,17 +272,56 @@ nav.navbar.hidden {
         justify-content: flex-end;
         align-items: flex-end;
         text-align: right;
-
     }
 
     #navbarNav>ul>li:nth-child(n)>a {
         padding: 10px 0 !important;
     }
 
-    .nav-item .dropdown-menu {
+    /* .nav-item .dropdown-menu {
         left: 0;
         width: 100%;
         height: 10px;
+    } */
+
+    .navbar-nav {
+        flex-direction: column; /* Menu thành cột */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Menu chính hiển thị theo cột */
+    }
+
+    /* Đặt menu con nằm chồng lên, không chiếm không gian */
+    .nav-item .dropdown-menu {
+        position: absolute; /* Định vị menu con tuyệt đối */
+        top: 70%; /* Hiển thị ngay dưới menu chính */
+        left: -250px; /* Căn trái với menu chính */
+        z-index: 1050; /* Đảm bảo menu con nổi trên các phần tử khác */
+        display: none; /* Ẩn menu con mặc định */
+        opacity: 1; /* Hiển thị hoàn toàn khi cần */
+        visibility: visible;
+        background-color: #056CB6; /* Màu nền menu con */
+        width: 230px; /* Chiều rộng của menu con */
+        transform: none; /* Hủy hiệu ứng dịch chuyển */
+    }
+
+    /* Hiện menu con khi nhấn */
+    .nav-item.show .dropdown-menu {
+        display: block; /* Hiển thị menu con */
+    }
+
+    /* Tùy chỉnh liên kết trong menu con */
+    .nav-item .dropdown-menu li a {
+        padding: 10px 10px; /* Tăng khoảng cách padding */
+        color: #fff; /* Màu chữ */
+        text-decoration: none; /* Loại bỏ gạch chân */
+    }
+
+    /* Hiệu ứng hover */
+    .nav-item .dropdown-menu li a:hover {
+        background-color: #F2C94C;
+        color: #fff;
     }
 
     #header .header-top span:not(:first-child), 
@@ -342,7 +384,7 @@ nav.navbar.hidden {
     }
 
     #about-head img {
-        max-width: 100%;
+        width: 100%;
         /* Ảnh chiếm toàn bộ chiều rộng */
         height: auto;
         object-fit: cover;

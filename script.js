@@ -76,3 +76,17 @@ function validateForm2(){
 
     toast.show();
 }   
+
+//đóng nav lại khi màn hình nhỏ
+document.addEventListener("click", function (event) {
+    const navbarToggler = document.querySelector(".navbar-toggler"); // Nút toggle (dấu 3 sọc)
+    const navbarCollapse = document.querySelector(".navbar-collapse"); // Phần menu (collapse)
+
+    // Kiểm tra xem đã mở menu chưa
+    const isMenuOpen = navbarToggler.getAttribute("aria-expanded") === "true";
+
+    // Kiểm tra nếu nhấn vào bên ngoài menu
+    if (isMenuOpen && !navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
+        navbarToggler.click(); // Gọi click để thu lại menu
+    }
+});
