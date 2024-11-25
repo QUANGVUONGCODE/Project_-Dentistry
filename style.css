@@ -241,6 +241,22 @@ nav.navbar.hidden {
 }
 
 
+.carousel-indicators button{
+    width: 5px !important;
+    height: 5px !important;
+    border-radius: 50%; /* Làm cho các button có hình tròn */
+    background-color: #bbb; /* Màu nền mặc định */
+    border: none;
+    transition: background-color 0.3s, transform 0.3s; /* Thêm hiệu ứng chuyển màu nền và hiệu ứng phóng to */
+  }
+
+
+  /* Thay đổi màu sắc cho button đang hoạt động (active) */
+  .carousel-indicators .active {
+    background-color: #dfaa23; /* Màu nền cho button hiện tại */
+  }
+
+
 @media  (max-width: 1025px) {
     .navbar .nav-item .nav-link {
         padding: 0 10px;
